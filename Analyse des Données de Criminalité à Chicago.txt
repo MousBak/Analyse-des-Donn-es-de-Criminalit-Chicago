@@ -1,0 +1,84 @@
+Analyse des Données de Criminalité à Chicago
+Vous êtes un Data Detective travaillant pour le département de police de Chicago. 
+Votre mission est de plonger dans les vastes archives de données de criminalité de la ville, de 2001 à ce jour, pour découvrir des tendances et des insights qui pourraient aider à améliorer la sécurité publique. 
+Grâce à une analyse approfondie de ces données, vous serez en mesure de révéler les schémas de criminalité, d'identifier les zones à haut risque, et de fournir des recommandations basées sur des preuves pour des interventions plus efficaces. 
+Ce projet vous permettra d'exploiter des compétences en manipulation de données volumineuses avec PySpark, visualisation et analyse statistique pour résoudre un problème réel et crucial.
+
+Source des données : Données de criminalité à Chicago
+
+Instructions
+Étape 1 : Préparation de l'environnement
+
+. Installez et chargez les bibliothèques nécessaires :
+findspark==2.0.1
+
+matplotlib==3.9.0
+
+numpy==1.26.4
+
+py4j==0.10.9.7
+
+pyspark==3.5.1
+
+pandas==2.2.2
+
+folium==0.16.0
+
+seaborn==0.13.2
+
+Vous pouvez travailler en local dans votre machine ou dans un notebook colab si votre machine n'est pas puissante.
+
+Étape 2 : Téléchargement des données
+
+Exécutez successivement les commandes suivantes dans un notebook pour télécharger les données :
+!wget https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv?accessType=DOWNLOAD
+
+!ls
+
+!mv rows.csv?accessType=DOWNLOAD reported-crimes.csv
+
+Étape 3 : Importation du fichier de données en tant que dataframe Spark
+
+Importez les données dans un dataframe PySpark.
+
+Affichez les premières lignes du dataframe pour vous familiariser avec la structure des données.
+Affichez le schema de la dataframe pour connaître le type des variables
+
+Étape 4 : Nettoyage et préparation des données
+
+Affichez le nombre de valeurs manquantes par colonne
+Convertissez les types de données si nécessaire (par exemple, les dates).
+
+Étape 5 : Exploration initiale des données
+
+Effectuez une analyse descriptive des données pour comprendre les principales caractéristiques (statistiques descriptives)
+Affichez une table donnant le nombre total de crimes par Type de Crime
+Affichez une table du nombre total de crimes par année
+Visualisez la distribution des Types de Crimes à l'aide d'un diagramme à barres
+Visualisez la distribution du nombre de crimes par année
+
+Étape 6 : Analyse géospatiale
+
+Créez des cartes pour visualiser la répartition géographique des crimes à Chicago.
+Identifiez les zones à haute criminalité en utilisant des techniques de densité de points ou des heatmaps.
+
+Étape 7 : Analyse des types de crimes
+
+Visualisez l'évolution des Types de Crimes
+Visualisez la matrice de corrélation entre les types de Crimes
+
+Étape 8 : Analyse des Arrestations
+
+Visualisez le Taux d'arrestation par Type de Crime
+Visualisez la tendance des crimes domestiques par année
+Étape 9 : Analyse des patrouilles de police
+
+Visualisez les 20 premiers secteurs de patrouille qui contiennent le plus de crimes
+Visualisez les 20 premiers secteurs de patrouille qui contiennent moins de crimes
+
+Étape 10 : Faites des analyses supplémetaires qui vous semblent pertinentes
+
+Étape 11 : Présentation des résultats
+
+Préparez une présentation PowerPoint pour partager vos résultats avec les parties prenantes.
+Construisez un dashboard avec des visualisations interactives pour faciliter la compréhension des insights clés (optionnel)
